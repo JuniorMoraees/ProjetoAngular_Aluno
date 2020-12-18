@@ -1,4 +1,4 @@
-# Projeto_Aluno_BackEndJava
+# ProjetoAngular_Aluno
 
 ### Tecnologias Usadas
 - SpringBoot,
