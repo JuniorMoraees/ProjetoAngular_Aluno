@@ -1,0 +1,77 @@
+
+<body>
+<nav>
+ <h2>JRMestudo</h2>
+</nav>
+
+    <div class="container-fluid col-md-6 offset-md-3" style="margin-top: 80px;">
+      <div class="card">
+        <div class="card-body bg-light">
+          <h1 class="text-center">PROGRAMA ALUNO LEGAL</h1>
+
+            <label for="nome">Nome: </label>
+            <input type="text" [(ngModel)]="aluno.nome" name="nome" id="nome" class="form-control" />
+
+            <label for="professor">Professor: </label>
+            <input type="text" [(ngModel)]="aluno.professor" name="professor" id="professor" class="form-control" />
+            <label for="materia">Materia: </label>
+            <input type="text" [(ngModel)]="aluno.materia" name="materia" id="materia" class="form-control" />
+            <div class="row">
+              <div class="col text-center">
+                <label for="trimestre1">1º Trimestre</label>
+                <input type="number" [(ngModel)]="aluno.trimestre1" name="trimestre1" id="trimestre1" class="form-control" />
+              </div>
+              <div class="col text-center">
+                <label for="trimestre2">2º Trimestre</label>
+                <input type="number" [(ngModel)]="aluno.trimestre2" name="trimestre2" id="trimestre2" class="form-control" />
+              </div>
+              <div class="col text-center">
+                <label for="trimestre3">3º Trimestre</label>
+                <input type="number" [(ngModel)]="aluno.trimestre3" name="trimestre3" id="trimestre3" class="form-control" />
+              </div>
+              <div class="col text-center">
+                <label for="trimestre4">4º Trimestre</label>
+                <input type="number" [(ngModel)]="aluno.trimestre4" name="trimestre4" id="trimestre4" class="form-control" />
+              </div>
+            </div>
+          </div>
+        </div>
+      <button (click)="gravar();" class="btn btn-lg btn-info mt-2">Gravar</button>
+    </div>
+    <br/><br/>
+  </body>
+    <table class="table table-bordered table-striped table-sm text-center">
+      <thead>
+        <tr>
+          <th>Aluno</th>
+          <th>Professor</th>
+          <th>Materia</th>
+          <th>1º Trimestre</th>
+          <th>2º Trimestre</th>
+          <th>3º Trimestre</th>
+          <th>4º Trimestre</th>
+          <th>Media</th>
+          <th>Situação</th>
+        </tr>
+    </thead>
+      <tbody>
+        <tr *ngFor = "let item of alunos">
+          <td>{{item.nome}} </td>
+          <td>{{item.professor}}</td>
+          <td>{{item.materia}}</td>
+          <td>{{item.trimestre1}}</td>
+          <td>{{item.trimestre2}}</td>
+          <td>{{item.trimestre3}}</td>
+          <td>{{item.trimestre4}}</td>
+          <td>{{item.media}}</td>
+          <td>{{item.situacao}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <nav>
+    <footer class="page-footer font-small blue">
+      <div class="footer-copyright text-center py-3">© 2020 Copyright: JRMestudo.com</div>
+    </footer>
+    </nav>
+
